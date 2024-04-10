@@ -1,0 +1,14 @@
+GET http://localhost:3000/pet
+
+###
+
+POST http://localhost:3000/pet  HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Lucky",
+    "type": "Gato",
+    "size": "Pequeno",
+    "gender": "Macho",
+    "bio": "O melhor gato do mundo"
+}

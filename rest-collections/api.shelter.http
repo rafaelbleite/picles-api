@@ -1,0 +1,13 @@
+GET http://localhost:3000/shelter
+
+###
+
+PUT http://localhost:3000/shelter  HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Luz dos Bichos",
+    "email": "luzdb@gmail.com",
+    "phone": "19981281830",
+    "whatsapp": "19981281830"
+}
