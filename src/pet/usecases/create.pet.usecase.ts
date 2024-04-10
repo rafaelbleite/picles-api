@@ -15,15 +15,20 @@ export default class CreatePetUseCase implements IUseCase<CreatePetControllerInp
   ) { }
 
   async run(input: CreatePetUseCaseInput): Promise<CreatePetUseCaseOutput> {
-    await this.petRepository.create(input)
+    const pet = await this.petRepository.create(input)
 
     return new CreatePetUseCaseOutput({
-      name: "Charlie",
-      type: "Dog",
-      size: "Large",
-      gender: "Male",
-      bio: "Conheça o encantador Charlie, um cachorro de porte grande cheio de amor e devoção, pronto para se tornar o seu fiel companheiro. Com seu pelo exuberante e seus olhos cheios de bondade, Charlie é um amigo leal em busca de um lar amoroso e atencioso. Seu temperamento gentil e brincalhão o torna perfeito para famílias ativas e cheias de afeto. Charlie está saudável, vacinado e castrado, pronto para fazer parte da sua vida. Ao adotar Charlie, você não apenas ganha um amigo fiel, mas também ajuda a promover a causa da adoção responsável de animais. Dê a Charlie a chance de encher sua vida com amor e alegria - adote-o hoje e descubra a beleza da amizade canina."
+      id: pet._id,
+      name: pet.name,
+      type: pet.type,
+      size: pet.size,
+      gender: pet.gender,
+      bio: pet.bio,
+      photo: pet.photo,
+      createdAt: pet.createdAt,
+      updatedAt: pet.updatedAt
     })
+
   }
 
 }

@@ -1,5 +1,9 @@
 import { Pet } from "../schemas/pet.schema";
 
 export default interface IPetRepository {
-  create(data: Partial<Pet>): Promise<void>
+  create(data: Partial<Pet>): Promise<Pet>
+  //getByID
+  //update
+  //deleteById
+  //findByFilter
 }
