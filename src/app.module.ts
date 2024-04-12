@@ -5,10 +5,13 @@ import { ShelterModule } from './shelter/shelter.module';
 import { MongooseModule } from '@nestjs/mongoose';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { PetModule } from './pet/pet.module';
+import { join } from 'path';
+import { MulterModule } from '@nestjs/platform-express';
 
 @Module({
   imports: [
     ConfigModule.forRoot(),
+    MulterModule,
     MongooseModule.forRootAsync({
       imports: [ConfigModule],
       inject: [ConfigService],
@@ -22,4 +25,4 @@ import { PetModule } from './pet/pet.module';
   controllers: [AppController],
   providers: [AppService],
 })
-export class AppModule { }
+export class AppModule {}
