@@ -32,14 +32,13 @@ DELETE http://localhost:3000/pet/661736238edf3458b91fd90b  HTTP/1.1
 
 ###
 
-PATCH http://localhost:3000/pet/661736238edf3458b91fd90b/photo HTTP/1.1
+# PATCH http://localhost:3000/pet/661736238edf3458b91fd90b/photo HTTP/1.1
 
-Content-Length: 206
-Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+# Content-Type: multipart/form-data; boundary=----MyBoundary
 
-------WebKitFormBoundary7MA4YWxkTrZu0gW
-Content-Disposition: form-data; name="photo"; filename="/./pet_2.jpg"
-Content-Type: image/jpeg
+# ------MyBoundary
+# Content-Disposition: form-data; name="photo"; filename="pet_2.jpg"
+# Content-Type: image/jpeg
 
-< ./pet_2.jpg
-------WebKitFormBoundary7MA4YWxkTrZu0gW--
+# < .\pet_2.jpg
+# ------MyBoundary--
