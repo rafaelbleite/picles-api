@@ -32,7 +32,8 @@ import UpdatePetPhotoByIdUseCaseOutput from './usecases/dtos/update.pet.photo.by
 import AppTokens from 'src/app.tokens';
 import GetPetsUseCaseInput from './usecases/dtos/get.pets.usecase.input';
 import GetPetsUseCaseOutput from './usecases/dtos/get.pets.usecase.output';
-
+import { ApiTags } from '@nestjs/swagger';
+@ApiTags('pets')
 @Controller('pet')
 export class PetController {
   @Inject(PetTokens.createPetUseCase)
@@ -98,7 +99,7 @@ export class PetController {
         : DEFAULT_ITENS_PER_PAGE,
     });
 
-    return await this.getPetsUseCase.run(useCaseInput);    
+    return await this.getPetsUseCase.run(useCaseInput);
   }
 
   @Get(':id')

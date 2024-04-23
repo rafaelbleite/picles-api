@@ -28,7 +28,7 @@ content-type: application/json
 
 ###
 
-DELETE http://localhost:3000/pet/661736238edf3458b91fd90b  HTTP/1.1
+DELETE http://localhost:3000/pet/661734f6d42ab93afb6eb917  HTTP/1.1
 
 ###
 
