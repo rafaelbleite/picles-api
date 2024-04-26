@@ -130,7 +130,7 @@ export class PetController {
     }
   }
 
-  @Patch(':id/photo')
+  @Put(':id/photo')
   @UseInterceptors(FileInterceptor('photo', multerConfig))
   async uploadPhoto(
     @Param('id') id: string,
